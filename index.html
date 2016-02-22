@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>USA Sensex Data</title>
+  <meta charset="utf-8">
+  <meta name="description" content="USA Sensex Data">
+  <meta name="author" content="Suresh Nukala">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>USA Sensex Data</h1>
+    <h2>Visualization &amp; Summary</h2>
+    <p>Suresh Nukala<br/>02/12/2016</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Overview of Shiny App</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li><p>Purpose:     Data exploration, Visualization &amp; Report preperation</p></li>
+<li><p>Data Source: usa.sensex.csv</p></li>
+<li><p>App Link:    <a href="https://suresh-nukala.shinyapps.io/first_deck/">https://suresh-nukala.shinyapps.io/first_deck/</a></p></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Application of App</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Main Panel : Data selection by state name</li>
+<li>Side Panel : Visualization of selected state data density through histogram </li>
+<li>Summary    : summary of data such as min, quartile, median, mean, max etc of selected state. </li>
+</ol>
+
+<p><img src="APP_snapshot.PNG" alt="width"></p>
+
+<pre><code class="r">data &lt;- read.csv(&quot;usa.sensex.csv&quot;, header = TRUE, sep = &quot;,&quot;)
+str(data)
+</code></pre>
+
+<pre><code>## &#39;data.frame&#39;:    2590 obs. of  7 variables:
+##  $ County.Name             : Factor w/ 1501 levels &quot;Abbeville&quot;,&quot;Acadia&quot;,..: 66 71 79 134 178 188 199 237 254 264 ...
+##  $ State                   : Factor w/ 48 levels &quot;AL&quot;,&quot;AR&quot;,&quot;AZ&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ Median.Age              : num  31.7 35.5 32.8 34.5 31.7 33.5 32.7 34.8 36.3 34 ...
+##  $ PerCapita.Income        : int  15768 16954 15532 14820 11120 12015 15162 13887 13936 14036 ...
+##  $ Percent.in.Poverty      : num  15.2 13.6 25 15 33 27.1 18 18.8 15.4 18.6 ...
+##  $ Population.Density      : num  60.4 66.5 28.8 62.4 17.6 ...
+##  $ Crime.Index..Per.capita.: int  457 282 47 185 141 266 560 218 51 296 ...
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Inputs</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>1.State: Selection of State</p>
+
+<p>2.Check Box : Selection for Summary Report</p>
+
+<p>3.Font Size : To alter the font size</p>
+
+<p><img src="APP_snapshot_Input.PNG" alt="width"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Data Visualization</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="APP_snapshot_Result.PNG" alt="width"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Overview of Shiny App'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Application of App'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Inputs'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Data Visualization'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
