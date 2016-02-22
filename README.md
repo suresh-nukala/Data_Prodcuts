@@ -1,5 +1,5 @@
 ---
-title     : 'Documentation'
+title1     : 'Documentation'
 subtitle  : 'Data Exploration & Analysis'
 author    : "Suresh Nukala"
 date      : "12 February 2016"
